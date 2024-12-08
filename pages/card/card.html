@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>Falak</title>
+
+    <link rel="manifest" href="/assets/pwa/manifest.json" />
+    <link
+      rel="icon"
+      href="/assets/images/logo.png"
+      type="image/png"
+      sizes="16x16"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Falak" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  </head>
+
+  <body class="preloader-active slide-in content" style="overflow: hidden;">
+    <header>
+      <div class="header-grid">
+        <div class="logo-container">
+          <a href="/" style="font-size: 35px"
+            ><i class="fa-solid fa-circle-arrow-left"></i
+          ></a>
+        </div>
+      </div>
+    </header>
+
+    <h1 style="text-align: center">Card Details</h1>
+    <div class="spacer-20"></div>
+    <div class="container">
+      <div
+        class="card"
+        style="
+          height: 133px;
+          background-image: url(/assets/images/card.png);
+          background-size: cover;
+        "
+      >
+        <div style="margin-bottom: 20px; display: flex; gap: 70%">
+          <img src="/assets/images/logo.png" class="logo-img" alt="" />
+          <img src="/assets/images/chip.svg" alt="" />
+        </div>
+
+        <div class="card-img-container">
+          <img
+            src="/assets/images/Mastercard.svg"
+            class="card-img"
+            alt=""
+            style="bottom: -100px"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="spacer-20"></div>
+
+    <container>
+      <style>
+        .t1 {
+          padding: 10px;
+          text-align: right;
+          color: gray;
+        }
+        .t2 {
+          padding: 10px;
+        }
+      </style>
+
+      <div style="display: flex; margin-left: 10%; font-size: 19px">
+        <table style="width: 100%; border-collapse: collapse">
+          <tr>
+            <td class="t1">Name</td>
+            <td class="t2"><span id="name">NAME</span></td>
+          </tr>
+          <tr>
+            <td class="t1">Card</td>
+            <td class="t2"><span id="card-number">NAME</span></td>
+          </tr>
+          <tr>
+            <td class="t1">Expiry</td>
+            <td class="t2"><span id="card-expiration">NAME</span></td>
+          </tr>
+          <tr>
+            <td class="t1">CVV</td>
+            <td class="t2"><span id="card-cvv">NAME</span></td>
+          </tr>
+          <tr>
+            <td class="t1">Status</td>
+            <td class="t2"><span id="card-status">NAME</span></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="spacer-20"></div>
+      <div class="spacer-20"></div>
+
+      <div style="text-align: center">
+        <a href="">
+          <button
+            style="
+              padding: 20px 50px;
+              font-size: 20px;
+              border-radius: 50px;
+              border: none;
+              background-color: #6124ae;
+              color: white;
+            "
+          >
+            Card Controls
+          </button>
+        </a>
+      </div>
+    </container>
+    <script src="/assets/data/data.js"></script>
+    <script src="/assets/js/script.js"></script>
+    
+  </body>
+</html>

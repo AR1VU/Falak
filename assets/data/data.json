@@ -1,0 +1,56 @@
+{
+    "name": "AbdulRahman Maniar",
+    "balance": 420.69,
+    "iban": "AE690331234567890123420",
+    "card": {
+        "number": "5420202400006969",
+        "type": "MasterCard",
+        "expiry": "01/2030",
+        "cvv": "420",
+        "status": "Active"
+    },
+    "loans": [
+        {
+            "amount": 1000.00,
+            "date": "2024-01-01",
+            "status": "Paid"
+        },
+        {
+            "amount": 500.00,
+            "date": "2024-01-05",
+            "status": "Pending"
+        }
+    ],
+    "investments": [
+        {
+            "name": "Stocks",
+            "amount": 1000.00,
+            "date": "2024-01-01"
+        },
+        {
+            "name": "Bonds",
+            "amount": 500.00,
+            "date": "2024-01-05"
+        }
+    ],
+    "transactions": [
+        {
+            "name": "Netflix",
+            "date": "2024-12-01",
+            "amount": -50.75,
+            "description": "Entertainment"
+        },
+        {
+            "name": "Salary",
+            "date": "2024-12-05",
+            "amount": 200.00,
+            "description": "Deposit"
+        },
+        {
+            "name": "Coffee Shop",
+            "date": "2024-12-08",
+            "amount": -15.00,
+            "description": "Food & Drink"
+        }
+    ]
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>Falak</title>
+
+    <link rel="manifest" href="/assets/pwa/manifest.json" />
+    <link
+      rel="icon"
+      href="/assets/images/logo.png"
+      type="image/png"
+      sizes="16x16"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Falak" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  </head>
+
+  <body class="preloader-active fade-in content">
+    <header>
+      <div class="header-grid">
+        <div class="logo-container">
+          <img src="/assets/images/logo.png" class="logo-img" alt="" />
+        </div>
+        <div class="greeting" id="greeting"></div>
+      </div>
+    </header>
+
+  
+
+    <a href="/pages/card/card.html" style="color: white;">
+        <div class="container">
+            <div class="card">
+              <div style="margin-bottom: 20px">
+                <h4>Balance</h4>
+                <h2>AED <span id="balance"></span></h2>
+              </div>
+      
+              <div style="margin-bottom: 10px">
+                <h5>IBAN</h5>
+                <h4><span id="iban"></span></h4>
+              </div>
+      
+              <div>
+                <h5>Card</h5>
+                <h4><span id="card-number-masked"></span></h4>
+              </div>
+      
+              <div class="card-img-container">
+                <img src="/assets/images/Mastercard.svg" class="card-img" alt="" />
+              </div>
+            </div>
+          </div>
+    </a>
+
+    <div class="spacer-20"></div>
+
+    <div class="container">
+      <div class="grid-container">
+        <div class="grid-item">
+          <a href="#">
+            <i class="fa-solid fa-nfc-symbol sign"></i>
+            <p>Transfer</p>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="/pages/loans/calculator.html">
+            <i class="fa-regular fa-sack-dollar sign"></i>
+            <p>Loans</p>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="#">
+            <i class="fa-regular fa-vault sign"></i>
+            <p>Invest</p>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="/pages/ai.html">
+            <i class="fa-regular fa-brain sign"></i>
+            <p>AI Advisor</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="transactions-header">
+        <h3>Transactions</h3>
+        <a href="">View All</a>
+      </div>
+
+      <div class="transaction-item">
+        <div class="transaction-icon">
+          <i class="fa-solid fa-gamepad"></i>
+        </div>
+        <div class="transaction-details">
+          <p class="transaction-title">Netflix</p>
+          <p class="transaction-category">Entertainment</p>
+        </div>
+        <div class="transaction-amount">
+          <p>AED 50.00</p>
+        </div>
+      </div>
+
+      <div class="transaction-item">
+        <div class="transaction-icon">
+          <i class="fa-solid fa-utensils"></i>
+        </div>
+        <div class="transaction-details">
+          <p class="transaction-title">McDonald's</p>
+          <p class="transaction-category">Entertainment</p>
+        </div>
+        <div class="transaction-amount">
+          <p>AED 30.00</p>
+        </div>
+      </div>
+
+      <div class="transaction-item">
+        <div class="transaction-icon">
+          <i class="fa-solid fa-hand-holding-heart"></i>
+        </div>
+        <div class="transaction-details">
+          <p class="transaction-title">Red Crescent</p>
+          <p class="transaction-category">Entertainment</p>
+        </div>
+        <div class="transaction-amount">
+          <p>AED 100.00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="spacer-120"></div>
+
+    <nav class="navbar">
+      <a href="#"><i class="fa-solid fa-wallet"></i></a>
+      <a href="#"><i class="fa-light fa-building-columns"></i></a>
+      <a href="#"><i class="fa-light fa-chart-simple"></i></a>
+      <a href="#"><i class="fa-light fa-diamonds-4"></i></a>
+    </nav>
+
+    <script src="/assets/data/data.js"></script>
+    <script src="/assets/js/script.js"></script>
+    <script>
+      window.addEventListener("load", function () {
+        if (!sessionStorage.getItem("preloaderShown")) {
+          setTimeout(function () {
+            document
+              .querySelector(".preloader")
+              .classList.add("preloader-hidden");
+            document.body.classList.remove("preloader-active");
+            sessionStorage.setItem("preloaderShown", "true");
+          }, 2000);
+        } else {
+          document
+            .querySelector(".preloader")
+            .classList.add("preloader-hidden");
+          document.body.classList.remove("preloader-active");
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>Falak</title>
+
+    <link rel="manifest" href="/assets/pwa/manifest.json" />
+    <link
+      rel="icon"
+      href="/assets/images/logo.png"
+      type="image/png"
+      sizes="16x16"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Falak" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  </head>
+
+  <body class="preloader-active slide-in content" style="overflow: hidden">
+    <header>
+      <div class="header-grid">
+        <div class="logo-container">
+          <a href="/" style="font-size: 35px"
+            ><i class="fa-solid fa-circle-arrow-left"></i
+          ></a>
+        </div>
+        <div class="greeting">Micro-Loans | Calculator</div>
+      </div>
+    </header>
+
+    <div class="spacer-20"></div>
+
+    <div class="container">
+      <div
+        style="
+          background-color: #6124ae;
+          background-image: url(/assets/images/card-pattern.svg);
+          width: 70%;
+          margin: 0 auto;
+          padding: 10%;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          border-radius: 50px;
+        "
+      >
+        <div style="margin-bottom: 20px">
+          <h4 style="margin: 0">Loan Amount</h4>
+          <h2 style="margin-top: 5px">
+            AED
+            <input
+              type="number"
+              autofocus
+              min="500"
+              max="5000"
+              id="amount"
+              style="
+                font-size: 23px;
+                font-weight: bold;
+                border: none;
+                color: white;
+                background: none;
+                height: 100%;
+                width: 60%;
+              "
+              placeholder="500-5000"
+            />
+          </h2>
+        </div>
+
+        <div style="margin-bottom: 10px">
+          <h5 style="margin: 0">Duration</h5>
+          <h4 style="margin-top: 5px">
+            <input
+              type="number"
+              autofocus
+              min="1"
+              max="12"
+              id="duration"
+              style="
+                font-size: 23px;
+                font-weight: bold;
+                border: none;
+                color: white;
+                background: none;
+                height: 100%;
+                text-align: center;
+                width: 20%;
+              "
+              placeholder="1-12"
+            />
+            Months
+          </h4>
+        </div>
+
+        <div style="margin-bottom: 10px">
+          <h5 style="margin: 0">Interest Rate</h5>
+          <h4 style="margin-top: 5px" id="interestE">0%</h4>
+        </div>
+
+        <div style="margin-bottom: 10px">
+          <h5 style="margin: 0">Interest Amount</h5>
+          <h4 style="margin-top: 5px">AED <span id="interestA">0</span></h4>
+        </div>
+
+        <div style="margin-bottom: 10px">
+          <h5 style="margin: 0">Monthly Installment</h5>
+          <h4 style="margin-top: 5px">AED <span id="installment">0</span></h4>
+        </div>
+
+        <div style="margin-bottom: 10px">
+          <h5 style="margin: 0">Total Amount</h5>
+          <h4 style="margin-top: 5px">AED <span id="total">0</span></h4>
+        </div>
+
+        <div style="margin-bottom: 10px"></div>
+
+        <div class="input-container">
+          <button
+            style="
+              border-radius: 15px;
+              font-size: 20px;
+              background-color: #ffffff;
+              color: black;
+              cursor: pointer;
+              border: none;
+              font-weight: bold;
+              padding: 10px 20px;
+            "
+            onclick="calculate()"
+          >
+            Calculate
+          </button>
+        </div>
+
+        <script>
+          
+        </script>
+
+        <div class="card-img-container">
+          <img
+            src="/assets/images/logo.png"
+            style="width: 50px; bottom: -20px; right: -10px"
+            class="card-img"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; display: none;" id="apply-button">
+      <div class="spacer-20"></div>
+      <div class="spacer-20"></div>
+      <a href="">
+        <button
+          style="
+            padding: 20px 50px;
+            font-size: 20px;
+            border-radius: 50px;
+            border: none;
+            background-color: #6124ae;
+            color: white;
+          "
+        >
+          Apply for Loan
+        </button>
+      </a>
+    </div>
+
+    <div
+      id="alert"
+      style="
+        opacity: 0;
+        background-color: rgb(170, 23, 23);
+        padding: 20px;
+        font-weight: bold;
+        font-size: 20px;
+        margin: 20px;
+        border-radius: 30px;
+        text-align: center;
+      "
+    >
+      <span id="alert-message"></span>
+    </div>
+
+    <script src="/assets/data/data.js"></script>
+    <script src="/assets/js/script.js"></script>
+    
+  </body>
+</html>
