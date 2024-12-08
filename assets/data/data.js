@@ -6,7 +6,8 @@ fetch("/assets/data/data.json")
     const balanceElement = document.getElementById("balance");
     const ibanElement = document.getElementById("iban");
     const cardNumberElement = document.getElementById("card-number");
-    const cardNumberMaskedElement = document.getElementById("card-number-masked");
+    const cardNumberMaskedElement =
+      document.getElementById("card-number-masked");
     const cardCVVElement = document.getElementById("card-cvv");
     const cardExpirationElement = document.getElementById("card-expiration");
     const cardStatusElement = document.getElementById("card-status");
@@ -66,3 +67,31 @@ fetch("/assets/data/data.json")
     }
   })
   .catch((error) => console.error("Error fetching data:", error));
+
+fetch("/assets/data/data.json")
+  .then((response) => response.json())
+  .then((data) => {
+    const loanDataContainer = document.getElementById("loanDataContainer");
+    data.loans.reverse().forEach((loan) => {
+      const loanItem = document.createElement("div");
+      loanItem.classList.add("loan-item");
+      loanItem.innerHTML = `
+                            <div class="loan-details">
+                                <h3 class="loan-name">${loan.name}</h3>
+                                
+                                <p class="loan-category">Interest: ${loan.interest}%</p>
+                                <p class="loan-category">Monthly Payment: AED ${loan.monthly_payment}</p>
+                                <p class="loan-category">Next Payment: ${loan.next_payment}</p>
+                            </div>
+                            <div class="loan-amount">
+                                <p>AED ${loan.amount}</p>
+                            </div>
+                            
+                        `;
+      loanDataContainer.appendChild(loanItem);
+      if (loan !== data.loans[data.loans.length - 1]) {
+        loanDataContainer.appendChild(document.createElement("hr"));
+      }
+    });
+  })
+  .catch((error) => console.error("Error fetching loan data:", error));

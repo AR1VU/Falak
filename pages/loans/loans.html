@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>Falak</title>
+
+    <link rel="manifest" href="/assets/pwa/manifest.json" />
+    <link
+      rel="icon"
+      href="/assets/images/logo.png"
+      type="image/png"
+      sizes="16x16"
+    />
+
+    <!-- Splash Screen for iPhone X (1125px x 2436px) -->
+<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" href="/assets/images/splash.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Falak" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  </head>
+
+  <body class="fade-in content">
+    <header>
+        <div class="header-grid">
+          <div class="logo-container">
+            <a href="/" style="font-size: 35px"
+              ><i class="fa-solid fa-circle-arrow-left"></i
+            ></a>
+          </div>
+          <div class="greeting">Micro-Loans</div>
+        </div>
+      </header>
+        <div id="loanDataContainer"></div>
+    </div>
+
+    <div class="spacer-120"></div>
+
+
+    <a href="./calculator.html" class="mbutton">
+      Apply for a new loan
+</a>
+
+
+    <script src="/assets/data/data.js"></script>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>

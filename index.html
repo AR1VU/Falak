@@ -16,6 +16,9 @@
       sizes="16x16"
     />
 
+    <!-- Splash Screen for iPhone X (1125px x 2436px) -->
+<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" href="/assets/images/splash.png">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,7 +31,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   </head>
 
-  <body class="preloader-active fade-in content">
+
+  <body class="fade-in content">
+    
     <header>
       <div class="header-grid">
         <div class="logo-container">
@@ -40,7 +45,7 @@
 
   
 
-    <a href="/pages/card/card.html" style="color: white;">
+    <a href="/auth/card.html" style="color: white;">
         <div class="container">
             <div class="card">
               <div style="margin-bottom: 20px">
@@ -76,7 +81,7 @@
           </a>
         </div>
         <div class="grid-item">
-          <a href="/pages/loans/calculator.html">
+          <a href="/pages/loans/loans.html">
             <i class="fa-regular fa-sack-dollar sign"></i>
             <p>Loans</p>
           </a>
@@ -142,7 +147,8 @@
       </div>
     </div>
 
-    <div class="spacer-120"></div>
+    <div class="spacer-20"></div>
+    <div class="spacer-20"></div>
 
     <nav class="navbar">
       <a href="#"><i class="fa-solid fa-wallet"></i></a>
@@ -154,22 +160,7 @@
     <script src="/assets/data/data.js"></script>
     <script src="/assets/js/script.js"></script>
     <script>
-      window.addEventListener("load", function () {
-        if (!sessionStorage.getItem("preloaderShown")) {
-          setTimeout(function () {
-            document
-              .querySelector(".preloader")
-              .classList.add("preloader-hidden");
-            document.body.classList.remove("preloader-active");
-            sessionStorage.setItem("preloaderShown", "true");
-          }, 2000);
-        } else {
-          document
-            .querySelector(".preloader")
-            .classList.add("preloader-hidden");
-          document.body.classList.remove("preloader-active");
-        }
-      });
+      
     </script>
   </body>
 </html>

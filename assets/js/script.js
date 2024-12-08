@@ -4,8 +4,6 @@ if (!navigator.serviceWorker.controller) {
   });
 }
 
-
-
 // function isMobileDevice() {
 //   return /Mobi|Android/i.test(navigator.userAgent);
 // }
@@ -13,7 +11,6 @@ if (!navigator.serviceWorker.controller) {
 //   document.body.innerHTML =
 //     "<h1>This website is only accessible on mobile devices.</h1>";
 // }
-
 
 function calculate() {
   const amountInput = document.getElementById("amount");
@@ -92,23 +89,43 @@ function calculate() {
     return;
   }
   const interestRates = [
-    4.39653, 4.37472, 4.35291, 4.32086, 4.28881, 4.25676, 4.267072,
-    4.277383, 4.287695, 4.298007, 4.308318, 4.31863,
+    4.39653, 4.37472, 4.35291, 4.32086, 4.28881, 4.25676, 4.267072, 4.277383,
+    4.287695, 4.298007, 4.308318, 4.31863,
   ];
 
   const interest = interestRates[duration - 1] / 100;
-  interestElement.innerHTML = `${interestRates[duration - 1]}%`;
-
   const interestAmountValue = amount * interest;
-  interestAmount.innerHTML = interestAmountValue.toFixed(2);
-
   const totalAmount = amount * (1 + interest);
   const monthlyInstallment = totalAmount / duration;
 
-  installment.innerHTML = monthlyInstallment.toFixed(2);
-  total.innerHTML = totalAmount.toFixed(2);
+  if (interestElement) {
+    interestElement.innerHTML = `${interestRates[duration - 1]}%`;
+  }
+
+  if (interestAmount) {
+    interestAmount.innerHTML = interestAmountValue.toFixed(2);
+  }
+
+  if (installment) {
+    installment.innerHTML = monthlyInstallment.toFixed(2);
+  }
+
+  if (total) {
+    total.innerHTML = totalAmount.toFixed(2);
+  }
 
   const applyButton = document.getElementById("apply-button");
-  applyButton.style.display = "block";
-  
+  if (applyButton) {
+    applyButton.style.display = "block";
+  }
 }
+
+
+
+window.addEventListener("load", function () {
+  localStorage.setItem("pwaOpened", "true");
+});
+
+window.addEventListener("beforeunload", function () {
+  localStorage.removeItem("pwaOpened");
+});

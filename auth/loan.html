@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>Falak</title>
+
+    <link rel="manifest" href="/assets/pwa/manifest.json" />
+    <link
+      rel="icon"
+      href="/assets/images/logo.png"
+      type="image/png"
+      sizes="16x16"
+    />
+
+    <!-- Splash Screen for iPhone X (1125px x 2436px) -->
+    <link
+      rel="apple-touch-startup-image"
+      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)"
+      href="/assets/images/splash.png"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Falak" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  </head>
+
+  <body class="fade-in content" style="overflow: hidden">
+    <header>
+      <div class="header-grid">
+        <div class="logo-container">
+          <img src="/assets/images/logo.png" class="logo-img" alt="" />
+        </div>
+        <div class="greeting">Authentication</div>
+      </div>
+    </header>
+
+    <div class="container" style="text-align: center">
+      <div class="card">
+        <h1 id="password">Enter your PIN</h1>
+      </div>
+    </div>
+
+    <div class="numberpad">
+      <button class="num-btn" id="numbtn1">1</button>
+      <button class="num-btn" id="numbtn2">2</button>
+      <button class="num-btn" id="numbtn3">3</button>
+      <button class="num-btn" id="numbtn4">4</button>
+      <button class="num-btn" id="numbtn5">5</button>
+      <button class="num-btn" id="numbtn6">6</button>
+      <button class="num-btn" id="numbtn7">7</button>
+      <button class="num-btn" id="numbtn8">8</button>
+      <button class="num-btn" id="numbtn9">9</button>
+      <button class="num-btn" disabled>
+        <i class="fa-light fa-face-viewfinder"></i>
+      </button>
+      <button class="num-btn" id="numbtn0">0</button>
+      <button class="num-btn" id="numbtnd">
+        <i class="fa-solid fa-delete-left"></i>
+      </button>
+    </div>
+
+    <script>
+      const numbtn1 = document.getElementById("numbtn1");
+      const numbtn2 = document.getElementById("numbtn2");
+      const numbtn3 = document.getElementById("numbtn3");
+      const numbtn4 = document.getElementById("numbtn4");
+      const numbtn5 = document.getElementById("numbtn5");
+      const numbtn6 = document.getElementById("numbtn6");
+      const numbtn7 = document.getElementById("numbtn7");
+      const numbtn8 = document.getElementById("numbtn8");
+      const numbtn9 = document.getElementById("numbtn9");
+      const numbtn0 = document.getElementById("numbtn0");
+      const numbtnd = document.getElementById("numbtnd");
+
+      const password = document.getElementById("password");
+
+      let pin = "";
+
+      const buttons = document.querySelectorAll(".num-btn:not([disabled])");
+      
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          pin += button.textContent.trim();
+          password.innerHTML = pin;
+          if (pin.length === 4) {
+            if (pin === "1234") {
+              window.location.href = "/pages/loans/done.html";
+            } else {
+              password.innerHTML = "Invalid PIN";
+              setTimeout(() => {
+                password.innerHTML = "Enter your PIN";
+                pin = "";
+              }, 1000);
+            }
+          }
+        });
+      });
+
+      numbtnd.addEventListener("click", () => {
+        pin = pin.slice(0, -1);
+        if (pin.length === 0) {
+          password.innerHTML = "Enter your PIN";
+          return;
+        }
+        password.innerHTML = pin;
+      });
+    </script>
+
+    <style>
+      html,
+      body {
+        overflow: hidden;
+      }
+      .numberpad {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .num-btn {
+        padding: 40px;
+        font-size: 30px;
+        cursor: pointer;
+        border: none;
+        background: none;
+        color: white;
+      }
+    </style>
+
+    <script src="/assets/data/data.js"></script>
+    <script src="/assets/js/script.js"></script>
+    <script></script>
+  </body>
+</html>

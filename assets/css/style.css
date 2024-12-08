@@ -1,3 +1,5 @@
+
+
 /* Index
 1. Imports
     1.1 FontAwesome CSS Imports
@@ -66,6 +68,26 @@ a {
 
 /* 3.2 Navbar */
 .navbar {
+  position: sticky;
+  bottom: 30px;
+  border-radius: 30px;
+  width: 85%;
+  background-color: #6124ae;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+.navbar a {
+  color: white;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+/* 3.2 Button */
+.mbutton {
   position: fixed;
   bottom: 30px;
   border-radius: 30px;
@@ -76,8 +98,6 @@ a {
   display: flex;
   justify-content: space-around;
   padding: 10px 0;
-}
-.navbar a {
   color: white;
   text-align: center;
   padding: 20px;
@@ -175,6 +195,61 @@ input::-webkit-inner-spin-button {
   color: #bdbdbd;
 }
 .transaction-amount {
+  padding: 0 20px;
+  border-radius: 10px;
+  text-align: right;
+  margin: auto 0;
+}
+
+
+/* 4.2 Loans */
+.loan-header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.loan-header h3 {
+  margin: 0;
+}
+.loan-header a {
+  font-size: 15px;
+}
+.loan-item {
+  display: grid;
+  border-radius: 30px;
+  grid-template-columns: 2fr 1fr;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+.loan-icon {
+  text-align: center;
+  border-radius: 30px;
+  margin: auto;
+}
+.loan-icon i {
+  width: 30px;
+  background-color: white;
+  color: black;
+  padding: 15px;
+  border-radius: 30px;
+  font-size: 25px;
+}
+.loan-details {
+  padding: 0 20px;
+  border-radius: 10px;
+}
+.loan-details p {
+  margin: 0;
+}
+.loan-details .loan-title {
+  font-size: 20px;
+}
+.loan-details .loan-category {
+  font-size: 13px;
+  color: #bdbdbd;
+}
+.loan-amount {
   padding: 0 20px;
   border-radius: 10px;
   text-align: right;

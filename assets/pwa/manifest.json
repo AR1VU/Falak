@@ -5,15 +5,22 @@
     "background_color": "#15172F",
     "display": "standalone",
     "scope": "/",
-    "start_url": "/",
-    "description": "Al Falak Islamic Community Bank",
+    "start_url": "/preloader.html",
+    "description": "Al Falak Community Bank",
     "orientation": "portrait",
+    "serviceworker": {
+        "src": "/service-worker.js",
+        "scope": "/",
+        "use_cache": true
+    },
+    "offline_enabled": true,
     "icons": [
         {
             "src": "/assets/images/logo2.png",
             "sizes": "1024x1024"
-        },
-        {
+        }
+    ],
+    "splash": [{
             "src": "/assets/images/splash.png",
             "sizes": "640x1136",
             "type": "image/png",

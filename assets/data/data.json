@@ -11,14 +11,26 @@
     },
     "loans": [
         {
+            "name": "Salary Advance",
             "amount": 1000.00,
-            "date": "2024-01-01",
+            "sdate": "01/01/2024",
+            "edate": "01/12/2024",
+            "duration": 12,
+            "next_payment": "PAID",
+            "interest": 5.00,
+            "monthly_payment": 87.5,            
             "status": "Paid"
         },
         {
-            "amount": 500.00,
-            "date": "2024-01-05",
-            "status": "Pending"
+            "name": " Salary Advance",
+            "amount": 5000.00,
+            "sdate": "16/08/2024",
+            "edate": "16/08/2025",
+            "duration": 12,
+            "next_payment": "16/12/2024",
+            "interest": 5.00,
+            "monthly_payment": 437.5,            
+            "status": "Active"      
         }
     ],
     "investments": [

@@ -28,15 +28,15 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   </head>
 
-  <body class="preloader-active slide-in content" style="overflow: hidden">
+  <body class="fade-in content" style="overflow: hidden">
     <header>
       <div class="header-grid">
         <div class="logo-container">
-          <a href="/" style="font-size: 35px"
+          <a href="./calculator.html" style="font-size: 35px"
             ><i class="fa-solid fa-circle-arrow-left"></i
           ></a>
         </div>
-        <div class="greeting">Micro-Loans | Calculator</div>
+        <div class="greeting">Micro-Loans | Application</div>
       </div>
     </header>
 
@@ -56,12 +56,34 @@
         "
       >
         <div style="margin-bottom: 20px">
+          <h4 style="margin: 0">Loan Name</h4>
+          <h2 style="margin-top: 5px">
+            <input
+              type="text"
+              autofocus
+              min="500"
+              max="5000"
+              id="loanName"
+              style="
+                font-size: 23px;
+                font-weight: bold;
+                border: none;
+                color: white;
+                background: none;
+                height: 100%;
+                width: 60%;
+              "
+              placeholder="Enter Name"
+            />
+          </h2>
+        </div>
+
+        <div style="margin-bottom: 20px">
           <h4 style="margin: 0">Loan Amount</h4>
           <h2 style="margin-top: 5px">
             AED
             <input
               type="number"
-              autofocus
               min="500"
               max="5000"
               id="amount"
@@ -80,11 +102,10 @@
         </div>
 
         <div style="margin-bottom: 10px">
-          <h5 style="margin: 0">Duration</h5>
+          <h4 style="margin: 0">Duration</h4>
           <h4 style="margin-top: 5px">
             <input
               type="number"
-              autofocus
               min="1"
               max="12"
               id="duration"
@@ -99,54 +120,45 @@
                 width: 20%;
               "
               placeholder="1-12"
+              onblur="calculate()"
+              onkeyup="calculate()"
             />
             Months
           </h4>
         </div>
 
         <div style="margin-bottom: 10px">
-          <h5 style="margin: 0">Interest Rate</h5>
-          <h4 style="margin-top: 5px" id="interestE">0%</h4>
-        </div>
-
-        <div style="margin-bottom: 10px">
-          <h5 style="margin: 0">Interest Amount</h5>
-          <h4 style="margin-top: 5px">AED <span id="interestA">0</span></h4>
-        </div>
-
-        <div style="margin-bottom: 10px">
-          <h5 style="margin: 0">Monthly Installment</h5>
-          <h4 style="margin-top: 5px">AED <span id="installment">0</span></h4>
-        </div>
-
-        <div style="margin-bottom: 10px">
-          <h5 style="margin: 0">Total Amount</h5>
-          <h4 style="margin-top: 5px">AED <span id="total">0</span></h4>
+          <h5 style="margin: 0">Payment</h5>
+          <h4 style="margin-top: 5px">
+            Monthly: AED <span id="installment">0</span><br />Total: AED
+            <span id="total">0</span>
+          </h4>
         </div>
 
         <div style="margin-bottom: 10px"></div>
+        <input type="checkbox" /> I agree to the terms and conditions
+        <div style="margin-bottom: 20px"></div>
 
-        <div class="input-container">
-          <button
-            style="
-              border-radius: 15px;
-              font-size: 20px;
-              background-color: #ffffff;
-              color: black;
-              cursor: pointer;
-              border: none;
-              font-weight: bold;
-              padding: 10px 20px;
-            "
-            onclick="calculate()"
-          >
-            Calculate
-          </button>
-        </div>
+        <a href="/auth/loan.html">
+            <div class="input-container">
+                <button
+                  style="
+                    border-radius: 15px;
+                    font-size: 20px;
+                    background-color: #ffffff;
+                    color: black;
+                    cursor: pointer;
+                    border: none;
+                    font-weight: bold;
+                    padding: 10px 20px;
+                  "
+                >
+                  Submit
+                </button>
+              </div>
+        </a>
 
-        <script>
-          
-        </script>
+        <script></script>
 
         <div class="card-img-container">
           <img
@@ -159,43 +171,7 @@
       </div>
     </div>
 
-    <div style="text-align: center; display: none;" id="apply-button">
-      <div class="spacer-20"></div>
-      <div class="spacer-20"></div>
-      <a href="">
-        <button
-          style="
-            padding: 20px 50px;
-            font-size: 20px;
-            border-radius: 50px;
-            border: none;
-            background-color: #6124ae;
-            color: white;
-          "
-        >
-          Apply for Loan
-        </button>
-      </a>
-    </div>
-
-    <div
-      id="alert"
-      style="
-        opacity: 0;
-        background-color: rgb(170, 23, 23);
-        padding: 20px;
-        font-weight: bold;
-        font-size: 20px;
-        margin: 20px;
-        border-radius: 30px;
-        text-align: center;
-      "
-    >
-      <span id="alert-message"></span>
-    </div>
-
     <script src="/assets/data/data.js"></script>
     <script src="/assets/js/script.js"></script>
-    
   </body>
 </html>
