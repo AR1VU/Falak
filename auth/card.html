@@ -88,26 +88,36 @@
       let pin = "";
 
       const buttons = document.querySelectorAll(".num-btn:not([disabled])");
+
+      fetch('/assets/data/data.json')
+        .then(response => response.json())
+        .then(data => {
+          const mpin = data.mpin;
+          buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+              pin += button.textContent.trim();
+              password.innerHTML = pin;
+              if (pin.length === 0) {
+                password.innerHTML = "Enter your PIN";
+              }
+              if (pin.length === 4) {
+                if (pin === mpin) {
+                  window.location.href = "/pages/card/card.html";
+                } else {
+                  password.innerHTML = "Invalid PIN";
+                  setTimeout(() => {
+                    password.innerHTML = "Enter your PIN";
+                    pin = "";
+                  }, 1000);
+                }
+              }
+            });
+          });
+        })
+        .catch(error => console.error('Error fetching data:', error));
       
 
-      buttons.forEach((button) => {
-        button.addEventListener("click", () => {
-          pin += button.textContent.trim();
-          password.innerHTML = pin;
-          if (pin.length === 4) {
-            if (pin === "1234") {
-              window.location.href = "/pages/card/card.html";
-            } else {
-              password.innerHTML = "Invalid PIN";
-              setTimeout(() => {
-                password.innerHTML = "Enter your PIN";
-                pin = "";
-              }, 1000);
-            }
-          }
-        });
-      });
-
+      
       numbtnd.addEventListener("click", () => {
         pin = pin.slice(0, -1);
         if (pin.length === 0) {
