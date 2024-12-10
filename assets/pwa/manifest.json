@@ -5,7 +5,7 @@
     "background_color": "#15172F",
     "display": "standalone",
     "scope": "/",
-    "start_url": "/preloader.html",
+    "start_url": "/pages/preloader.html",
     "description": "Al Falak Community Bank",
     "orientation": "portrait",
     "serviceworker": {

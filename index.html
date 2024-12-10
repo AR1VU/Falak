@@ -123,8 +123,13 @@
     <script src="/assets/js/data.js"></script>
     <script src="/assets/js/script.js"></script>
     <script>
-      window.addEventListener('offline', function() {
+      if (localStorage.getItem("loaded") === "false") {
         location.reload();
+      }
+      localStorage.setItem("loaded", "true");
+      // delete cookie if pwa is closed
+      window.addEventListener("beforeunload", function (e) {
+        localStorage.setItem("loaded", "false");
       });
     </script>
   </body>

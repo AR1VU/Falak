@@ -1,5 +1,5 @@
 // Data JSON File Location
-const dataFile = "/assets/data/data.json";
+const dataFile = "/data.json";
 
 function getTransactionId() {
   const urlParams = new URLSearchParams(window.location.search);
