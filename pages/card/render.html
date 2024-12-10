@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>Falak</title>
+
+    <link rel="manifest" href="/assets/pwa/manifest.json" />
+    <link
+      rel="icon"
+      href="/assets/images/logo.png"
+      type="image/png"
+      sizes="16x16"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Falak" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  </head>
+
+  <body>
+
+    <section class="fade-in" id="content">
+      <header>
+        
+          <div class="logo-container">
+            <a href="/" style="font-size: 35px"
+              ><i class="fa-solid fa-circle-arrow-left"></i
+            ></a>
+          </div>
+        </div>
+      </header>
+
+    <div style="padding: 42px;"></div>
+
+      <h1 style="text-align: center">Card Details</h1>
+      <div class="spacer-20"></div>
+      <div class="container">
+        <div
+          class="card"
+          style="
+            height: 133px;
+            background-image: url(/assets/images/card.png) ;
+            background-size: cover;
+          "
+        >
+          <div style="margin-bottom: 20px; display: flex; gap: 70%">
+              <img src="/assets/images/chip.svg" alt=""/>
+            <img src="/assets/images/logo.png" class="logo-img" alt="" />
+          </div>
+
+          
+
+          <div class="card-img-container">
+            <img
+              src="/assets/images/Mastercard.svg"
+              class="card-img"
+              alt=""
+              style="bottom: -100px"
+            />
+          </div>
+          <div style="padding:20px;"></div>
+          <div>
+            <h3><span id="name">NAME</span></h3>
+          </div>
+        </div>
+<div style="padding: 20px;"></div>
+        <div
+          class="card"
+          style="
+            height: 133px;
+            /* Black overlay*/
+
+            background-image: url(/assets/images/card.png);
+            background-size: cover;
+            opacity: 1;
+            "
+        >
+          <div style="margin-top: -10px;">
+            <h4>Card Number</h4>
+            <h2><span id="card-number">**** **** **** ****</span></h2>
+
+            <br>
+
+            <h4>Expiry Date</h4>
+            <h3 style="margin: 0;"><span id="card-expiration">MM/YY</span></h3>
+
+            <br>
+
+            <h4>CVV</h4>
+            <h3 style="margin: 0;"><span id="card-cvv">***</span></h3>
+
+          </div>
+
+        </div>
+      </div>
+
+      <script src="/assets/js/data.js"></script>
+      <script src="/assets/js/script.js"></script>
+    </section>
+  </body>
+</html>
