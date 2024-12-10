@@ -13,72 +13,10 @@
         "scope": "/",
         "use_cache": true
     },
-    "offline_enabled": true,
     "icons": [
         {
-            "src": "/assets/images/logo2.png",
+            "src": "http://falak.rf.gd/assets/images/logo2.png",
             "sizes": "1024x1024"
-        }
-    ],
-    "splash": [{
-            "src": "/assets/images/splash.png",
-            "sizes": "640x1136",
-            "type": "image/png",
-            "purpose": "any maskable"
-        },
-        {
-            "src": "/assets/images/splash.png",
-            "sizes": "750x1334",
-            "type": "image/png",
-            "purpose": "any maskable"
-        },
-        {
-            "src": "/assets/images/splash.png",
-            "sizes": "828x1792",
-            "type": "image/png",
-            "purpose": "any maskable"
-        },
-        {
-            "src": "/assets/images/splash.png",
-            "sizes": "1125x2436",
-            "type": "image/png",
-            "purpose": "any maskable"
-        },
-        {
-            "src": "/assets/images/splash.png",
-            "sizes": "1242x2208",
-            "type": "image/png",
-            "purpose": "any maskable"
-        },
-        {
-            "src": "/assets/images/splash.png",
-            "sizes": "1242x2688",
-            "type": "image/png",
-            "purpose": "any maskable"
-        },
-        {
-            "src": "/assets/images/splash.png",
-            "sizes": "1536x2048",
-            "type": "image/png",
-            "purpose": "any maskable"
-        },
-        {
-            "src": "/assets/images/splash.png",
-            "sizes": "1668x2224",
-            "type": "image/png",
-            "purpose": "any maskable"
-        },
-        {
-            "src": "/assets/images/splash.png",
-            "sizes": "1668x2388",
-            "type": "image/png",
-            "purpose": "any maskable"
-        },
-        {
-            "src": "/assets/images/splash.png",
-            "sizes": "2048x2732",
-            "type": "image/png",
-            "purpose": "any maskable"
         }
     ]
 }

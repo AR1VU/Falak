@@ -120,8 +120,6 @@ function calculate() {
   }
 }
 
-
-
 window.addEventListener("load", function () {
   localStorage.setItem("pwaOpened", "true");
 });
@@ -129,3 +127,30 @@ window.addEventListener("load", function () {
 window.addEventListener("beforeunload", function () {
   localStorage.removeItem("pwaOpened");
 });
+
+function copycardnum() {
+  var copyText = document.getElementById("card-number");
+  navigator.clipboard.writeText(copyText.textContent);
+  // Flash copied fade in and out
+  setTimeout(() => {
+    // loop add 0.1 to opacity until 1
+    var i = 0;
+    var interval = setInterval(() => {
+      document.getElementById("copied").style.opacity = i;
+      i += 0.1;
+      if (i >= 1) {
+        clearInterval(interval);
+      }
+    }, 25);
+
+    setTimeout(() => {
+      var interval = setInterval(() => {
+        document.getElementById("copied").style.opacity = i;
+        i -= 0.1;
+        if (i <= 0) {
+          clearInterval(interval);
+        }
+      }, 25);
+    }, 1500);
+  }, 0);
+}

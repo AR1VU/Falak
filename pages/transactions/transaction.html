@@ -37,22 +37,40 @@
 
   <body class="fade-in content">
     <header>
-        <div class="logo-container">
-          <a href="/" style="font-size: 35px"
-            ><i class="fa-solid fa-circle-arrow-left"></i
-          ></a>
-        </div>
-        <div class="greeting">Micro-Loans</div>
-      
+      <div class="logo-container">
+        <a href="/" style="font-size: 35px"
+          ><i class="fa-solid fa-circle-arrow-left"></i
+        ></a>
+      </div>
+      <div class="greeting">Transaction</div>
     </header>
 
-    <div style="padding: 42px;"></div>
+    <div style="padding: 42px"></div>
 
-    <div id="loanDataContainer"></div>
+    <div class="container">
+      <h1 style="text-align: center;"><span id="transName"></span></h1>
+      <h3 style="text-align: center; color: gray;"><span id="transDesc"></span></h3>
 
-    <a href="./calculator.html" class="mbutton"> Apply for a new loan </a>
+        <div class="card">
+          <div style="margin-bottom: 20px">
+            <h4>Amount</h4>
+            <h2>AED <span id="transAmount"></span></h2>
+            <br>
+            <hr>
+            <br>
+            <h4>Date: <span id="transDate"></span></h4>
+            <br>
+            <h4>Transaction ID: <span id="transID"></span></h4>
+            
+            </div>
+    </div>
+
+    <script>
+      
+    </script>
 
     <script src="/assets/js/data.js"></script>
     <script src="/assets/js/script.js"></script>
+    <script></script>
   </body>
 </html>

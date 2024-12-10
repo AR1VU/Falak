@@ -48,13 +48,13 @@ body {
   background-color: #15172f;
   color: white;
   font-family: Rubik;
+  text-overflow: ellipsis;
 }
 
 /* 2.2 Link Styles */
 a {
   text-decoration: none;
   color: #a56fff;
-  font-size: 15px;
 }
 
 /* 3. Layout Styles */
@@ -106,9 +106,13 @@ a {
 }
 
 /* 3.3 Header Grid */
-.header-grid {
+header {
   display: grid;
   grid-template-columns: 1fr 10fr;
+  position: fixed;
+  background-color: #15172f;
+  margin-top: -10px;
+  padding-top: 0;
 }
 
 /* 4. Components Styles */
@@ -164,7 +168,7 @@ input::-webkit-inner-spin-button {
 }
 .transaction-item {
   display: grid;
-  grid-template-columns: 0.5fr 2fr 1.5fr;
+  grid-template-columns: 1fr 3fr 2fr;
   padding: 10px 20px;
 }
 .transaction-icon {
@@ -190,7 +194,7 @@ input::-webkit-inner-spin-button {
 .transaction-details .transaction-title {
   font-size: 20px;
 }
-.transaction-details .transaction-category {
+.transaction-details .transaction-category, .transaction-date, .transaction-id {
   font-size: 13px;
   color: #bdbdbd;
 }
@@ -219,7 +223,7 @@ input::-webkit-inner-spin-button {
   display: grid;
   border-radius: 30px;
   grid-template-columns: 2fr 1fr;
-  padding: 20px;
+  padding: 10px 20px;
   margin-bottom: 10px;
 }
 .loan-icon {
